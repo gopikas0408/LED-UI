@@ -220,7 +220,7 @@ const PRODUCTS = [
   {name:'Vesper Rectangle', img:'https://images.thdstatic.com/productImages/e28f9604-9245-40fc-8931-ecb045254e2d/svn/matte-black-kiotee-vanity-mirrors-ktl001b6040-64_1000.jpg', price:960, old:1150, rating:'4.8', sizes:['32"×40"','36"×48"'], offer:'-16%'},
   {name:'Halo Capsule', img:'https://customledmirror.com/cdn/shop/files/2_b5cd3d37-b4b1-4aca-9ef0-2ca49547c2e1_3200x.jpg?v=1719350036', price:1040, old:null, rating:'4.9', sizes:['28"×48"'], offer:'Bestseller'},
   {name:'Solstice Oval', img:'https://m.media-amazon.com/images/I/71CUh+Wr+zL._AC_SL1500_.jpg', price:890, old:1050, rating:'4.7', sizes:['26"×36"','30"×42"'], offer:'-15%'},
-  {name:'Noir Smart Suite', img:'https://www.glazonoid.com/cdn/shop/files/bestsellers_main_page-1_ff5d9b81-4fa4-4320-abe0-8eb6db9ab029.webp?v=1766459680', price:1450, old:null, rating:'5.0', sizes:['36"×60"','40"×72"'], offer:'Smart'}
+  {name:'Noir Smart Suite', img:'https://image.made-in-china.com/2f0j00mzloraqMJLuG/Wholesale-Rectangle-Bathroom-Wall-Mount-Dimmable-Brightness-Anti-Fog-Lighted-LED-Smart-Mirror.jpg', price:1450, old:null, rating:'5.0', sizes:['36"×60"','40"×72"'], offer:'Smart'}
 ];
 document.getElementById('productsGrid').innerHTML = PRODUCTS.map((p,i)=>`
   <article class="pd-card">
@@ -316,7 +316,7 @@ const ROOMS = [
   {name:'Bathroom', before:'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop', after:'https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1200&auto=format&fit=crop'},
   {name:'Bedroom', before:'https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop', after:'https://images.unsplash.com/photo-1616627988309-fe6cec5e0d15?q=80&w=1200&auto=format&fit=crop'},
   {name:'Hotel Suite', before:'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200&auto=format&fit=crop', after:'https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?q=80&w=1200&auto=format&fit=crop'},
-  {name:'Spa', before:'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop', after:'https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=1200&auto=format&fit=crop'}
+  
 ];
 const roomTabsEl = document.getElementById('roomTabs');
 const baBefore = document.getElementById('baBefore');
