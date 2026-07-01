@@ -220,7 +220,7 @@ const PRODUCTS = [
   {name:'Vesper Rectangle', img:'https://images.thdstatic.com/productImages/e28f9604-9245-40fc-8931-ecb045254e2d/svn/matte-black-kiotee-vanity-mirrors-ktl001b6040-64_1000.jpg', price:960, old:1150, rating:'4.8', sizes:['32"×40"','36"×48"'], offer:'-16%'},
   {name:'Halo Capsule', img:'https://customledmirror.com/cdn/shop/files/2_b5cd3d37-b4b1-4aca-9ef0-2ca49547c2e1_3200x.jpg?v=1719350036', price:1040, old:null, rating:'4.9', sizes:['28"×48"'], offer:'Bestseller'},
   {name:'Solstice Oval', img:'https://m.media-amazon.com/images/I/71CUh+Wr+zL._AC_SL1500_.jpg', price:890, old:1050, rating:'4.7', sizes:['26"×36"','30"×42"'], offer:'-15%'},
-  {name:'Noir Smart Suite', img:'https://image.made-in-china.com/2f0j00mzloraqMJLuG/Wholesale-Rectangle-Bathroom-Wall-Mount-Dimmable-Brightness-Anti-Fog-Lighted-LED-Smart-Mirror.jpg', price:1450, old:null, rating:'5.0', sizes:['36"×60"','40"×72"'], offer:'Smart'}
+  {name:'Noir Smart Suite', img:'https://tse4.mm.bing.net/th/id/OIP.TX2OnNDZFi2166jxGtdm1gHaHa?w=777&h=777&rs=1&pid=ImgDetMain&o=7&rm=3', price:1450, old:null, rating:'5.0', sizes:['36"×60"','40"×72"'], offer:'Smart'}
 ];
 document.getElementById('productsGrid').innerHTML = PRODUCTS.map((p,i)=>`
   <article class="pd-card">
