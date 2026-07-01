@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>LUMIÈRE — Luxury LED Mirrors for Modern Interiors</title>
+<meta name="description" content="Illuminate your world. Premium LED mirrors handcrafted for luxury bathrooms, bedrooms, hotels, and spas. Smart lighting, custom shapes, five-year warranty.">
+<meta name="theme-color" content="#0F1115">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<style>
+
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="scrollbar"></div>
+<div id="cursorGlow"></div>
+
+<div id="loader" aria-hidden="true">
+  <div class="loader-frame"><div class="glass"><div class="sheen"></div></div></div>
+  <div class="loader-word">LUMIÈRE</div>
+  <div class="loader-pct" id="loaderPct">0%</div>
+</div>
+
+<div id="toast-wrap"></div>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image preview">
+  <button class="lb-close" id="lbClose" aria-label="Close preview"><svg><use href="#i-x"/></svg></button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous image"><svg><use href="#i-chevron-left"/></svg></button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next image"><svg><use href="#i-chevron-right"/></svg></button>
+  <div class="lb-caption" id="lbCaption"></div>
+</div>
+
+<header id="navbar">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Primary">
+      <a href="#hero" class="logo">
+        <span class="mark"><svg><use href="#i-sparkle"/></svg></span>
+        <b>LUMIÈRE</b>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#categories">Collections</a>
+        <a href="#bestsellers">Mirrors</a>
+        <a href="#smart">Smart</a>
+        <a href="#studio">Custom</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search"><svg><use href="#i-search"/></svg></button>
+        <button class="icon-btn" id="wishBtn" aria-label="Wishlist"><svg><use href="#i-heart"/></svg><span class="badge" id="wishCount">0</span></button>
+        <button class="icon-btn" id="cartBtn" aria-label="Cart"><svg><use href="#i-shopping-bag"/></svg><span class="badge" id="cartCount">0</span></button>
+        <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle light mode">
+          <svg class="moon"><use href="#i-moon"/></svg>
+          <svg class="sun"><use href="#i-sun"/></svg>
+        </button>
+        <a href="#studio" class="btn btn-gold btn-sm btn-ripple"><svg><use href="#i-calendar"/></svg>Book Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div id="drawerOverlay"></div>
+<nav id="mobileDrawer" aria-label="Mobile">
+  <div class="drawer-utility">
+    <button class="icon-btn" id="profileBtnM" aria-label="Profile"><svg><use href="#i-user"/></svg></button>
+    <button class="icon-btn" id="searchBtnM" aria-label="Search"><svg><use href="#i-search"/></svg></button>
+    <button class="icon-btn" id="wishBtnM" aria-label="Wishlist"><svg><use href="#i-heart"/></svg></button>
+  </div>
+  <a href="#categories">Collections</a>
+  <a href="#bestsellers">Mirrors</a>
+  <a href="#smart">Smart Features</a>
+  <a href="#inspiration">Inspiration</a>
+  <a href="#studio">Custom Mirror</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="#studio" class="btn btn-gold btn-ripple"><svg><use href="#i-calendar"/></svg>Book Now</a>
+</nav>
+
+<main id="main">
+<section id="hero">
+  <div class="hero-bg">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.A2WpqdX0ruyoL9Y_KL1b_QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Luxury marble bathroom with an illuminated LED mirror above a floating vanity, warm golden light">
+  </div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div id="particles" aria-hidden="true"></div>
+  <div class="scroll-cue"><span style="font-family:var(--btn-font); font-size:10px; letter-spacing:.3em; text-transform:uppercase; writing-mode:vertical-rl;">Scroll</span><div class="line"></div></div>
+
+  <div class="container hero-content">
+    <p class="hero-eyebrow reveal in">Handcrafted Illumination</p>
+    <h1 class="reveal in">Illuminate<br>Your <em>World.</em></h1>
+    <p class="sub reveal in">Premium LED mirrors crafted for modern luxury interiors — where light, glass, and design become one.</p>
+    <div class="hero-btns reveal in">
+      <a href="#bestsellers" class="btn btn-gold btn-ripple"><svg><use href="#i-arrow-right"/></svg>Explore Collection</a>
+      <a href="#studio" class="btn btn-ghost"><svg><use href="#i-sliders"/></svg>Customize Mirror</a>
+      <button class="btn btn-ghost" id="watchVideoBtn"><svg><use href="#i-play"/></svg>Watch Film</button>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories" class="section-pad">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Curated Collections</p>
+      <h2>Find Your Perfect Mirror</h2>
+      <p>Nine collections, one obsession — the perfect union of light and reflection.</p>
+    </div>
+    <div class="cat-grid reveal-stagger" id="catGrid"></div>
+  </div>
+</section>
+
+<!-- BEST SELLERS -->
+<section id="bestsellers" class="section-pad">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Most Loved</p>
+      <h2>Best Sellers</h2>
+      <p>The mirrors our clients return for, again and again.</p>
+    </div>
+    <div class="grid-products reveal-stagger" id="productsGrid"></div>
+    <div class="view-all-wrap reveal"><a href="#" class="btn btn-outline">View Full Catalogue <svg><use href="#i-arrow-right"/></svg></a></div>
+  </div>
+</section>
+
+<!-- SMART FEATURES -->
+<section id="smart" class="section-pad smart-section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Intelligent by Design</p>
+      <h2>Smart Features</h2>
+      <p>Tap a feature to see it come to life on the mirror.</p>
+    </div>
+    <div class="smart-grid">
+      <div class="reveal left">
+        <div class="mirror-demo" id="mirrorDemo" style="--mirror-ring:rgba(212,175,55,.55);">
+          <div class="ring"></div>
+          <div class="glass-surface"><div class="reflect"></div></div>
+          <div class="mirror-hud">
+            <div class="badges">
+              <span><svg><use href="#i-bluetooth"/></svg>BT</span>
+              <span><svg><use href="#i-hand"/></svg>Touch</span>
+              <span><svg><use href="#i-wind"/></svg>Defog</span>
+            </div>
+            <div>
+              <div class="time" id="hudTime">07:42</div>
+              <div class="date">Tuesday, 1 July</div>
+              <div class="weather"><svg><use href="#i-cloud-sun"/></svg><span id="hudWeather">24°C · Clear skies</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-row">
+          <label>Brightness</label>
+          <input type="range" min="10" max="100" value="70" id="brightnessSlider" aria-label="Adjust mirror brightness">
+        </div>
+      </div>
+
+      <div class="reveal right">
+        <div class="feature-list" id="featureList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOM INSPIRATION -->
+<section id="inspiration" class="section-pad">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Room Inspiration</p>
+      <h2>See the Transformation</h2>
+      <p>Drag the slider to reveal the difference light makes.</p>
+    </div>
+    <div class="room-tabs reveal" id="roomTabs"></div>
+    <div class="ba-wrap reveal" id="baWrap">
+      <span class="ba-label before">Before</span>
+      <span class="ba-label after">After</span>
+      <img id="baBefore" src="" alt="Room before installing a Lumière LED mirror">
+      <img id="baAfter" class="ba-after" src="" alt="Same room after installing a Lumière LED mirror">
+      <div class="ba-handle" id="baHandle"><span class="grip"><svg><use href="#i-chevron-left"/></svg><svg><use href="#i-chevron-right"/></svg></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM MIRROR STUDIO -->
+<section id="studio" class="section-pad studio-section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Made to Measure</p>
+      <h2>Custom Mirror Studio</h2>
+      <p>Design your mirror, shape by shape, light by light. The price updates as you go.</p>
+    </div>
+
+    <div class="studio-grid">
+      <div class="studio-preview reveal left">
+        <svg class="studio-svg" id="studioSvg" viewBox="0 0 200 200">
+          <defs>
+            <radialGradient id="glassGrad" cx="35%" cy="30%" r="80%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+              <stop offset="55%" stop-color="rgba(255,255,255,0.04)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0.01)"/>
+            </radialGradient>
+          </defs>
+          <circle class="glow-ring" id="shapeGlow" cx="100" cy="100" r="80"/>
+          <circle class="glass" id="shapeGlass" cx="100" cy="100" r="76"/>
+          <circle class="frame" id="shapeFrame" cx="100" cy="100" r="80"/>
+        </svg>
+        <div class="studio-price-tag">
+          <div class="lbl">Estimated Price</div>
+          <div class="val" id="studioPrice">$680</div>
+        </div>
+      </div>
+
+      <div class="studio-options reveal right">
+        <div class="opt-group">
+          <h6>Shape</h6>
+          <div class="opt-swatches" id="shapeOpts"></div>
+        </div>
+        <div class="opt-group">
+          <h6>Size</h6>
+          <div class="opt-swatches" id="sizeOpts"></div>
+        </div>
+        <div class="opt-group">
+          <h6>Frame Finish</h6>
+          <div class="opt-swatches" id="frameOpts"></div>
+        </div>
+        <div class="opt-group">
+          <h6>Light Color</h6>
+          <div class="opt-swatches" id="lightOpts"></div>
+        </div>
+        <div class="opt-group">
+          <h6>Add-ons</h6>
+          <div class="opt-toggles" id="toggleOpts"></div>
+        </div>
+        <a href="#contact" class="btn btn-dark btn-block btn-ripple" id="studioCta"><svg><use href="#i-check"/></svg>Book This Mirror — <span id="studioCtaPrice">$680</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section-pad" style="background:var(--surface);">
+  <div class="container">
+    <div class="stat-grid reveal-stagger" id="statGrid"></div>
+    <div class="section-head center reveal" style="margin-top:70px;">
+      <p class="eyebrow">The Lumière Standard</p>
+      <h2>Why Choose Us</h2>
+    </div>
+    <div class="why-grid reveal-stagger" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- INSTALLATION PROCESS -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">From Order to Wall</p>
+      <h2>Installation Process</h2>
+    </div>
+    <div class="timeline reveal-stagger" id="timelineGrid"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section-pad" style="background:var(--surface);">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">A Visual Journey</p>
+      <h2>Gallery</h2>
+      <p>Real installations across the world's finest interiors.</p>
+    </div>
+    <div class="gallery-grid reveal" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="section-pad" style="padding-left:0; padding-right:0;">
+  <div class="container">
+    <div class="section-head center reveal"><p class="eyebrow">Client Stories</p><h2>Reviews</h2></div>
+  </div>
+  <div class="reviews-track-wrap"><div class="reviews-track" id="reviewsTrack"></div></div>
+</section>
+
+<!-- BLOG -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Journal</p>
+      <h2>Interior &amp; Lighting Notes</h2>
+    </div>
+    <div class="grid-blog reveal-stagger" id="blogGrid"></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section-pad" style="padding-bottom:0;">
+  <div class="container">
+    <div class="news-strip reveal">
+      <h3>Join the inner circle for early access to new collections.</h3>
+      <p>One considered email a month. No more.</p>
+      <form class="news-form" id="newsletterForm" onsubmit="return false;">
+        <input type="email" placeholder="Enter your email" required>
+        <button class="btn btn-gold btn-ripple" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Let's Talk</p>
+      <h2>Visit a Showroom or Book a Consultation</h2>
+      <p>Our design consultants will help you choose, customize, and install the perfect mirror.</p>
+    </div>
+    <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;" class="reveal">
+      <a href="#" class="btn btn-gold btn-ripple"><svg><use href="#i-calendar"/></svg>Book Consultation</a>
+      <a href="#" class="btn btn-outline"><svg><use href="#i-map-pin"/></svg>Find a Showroom</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="logo"><span class="mark"><svg><use href="#i-sparkle"/></svg></span><b>LUMIÈRE</b></a>
+        <p>Luxury LED mirrors handcrafted for the world's most considered interiors.</p>
+      </div>
+      <div><h6>Shop</h6><div class="flinks"><a href="#categories">Collections</a><a href="#bestsellers">Best Sellers</a><a href="#studio">Custom Studio</a><a href="#">Gift Cards</a></div></div>
+      <div><h6>Company</h6><div class="flinks"><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#">Careers</a><a href="#">Press</a></div></div>
+      <div><h6>Support</h6><div class="flinks"><a href="#">Warranty</a><a href="#">Installation</a><a href="#">Shipping</a><a href="#contact">Contact</a></div></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Lumière Mirrors. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+        <a href="#" aria-label="Pinterest"><svg><use href="#i-pinterest"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs id="iconDefs"></defs></svg>
+
+<script src="./script.js">
+
+</script>
+</body>
+</html>
